@@ -1,0 +1,12 @@
+#start {
+    position: relative;
+    top: 900%;
+    opacity: 0.6;
+}
+.jumbotron {
+    background: transparent;
+    color: aliceblue;
+    position: relative;
+    top: 110%;
+    left: 75%;
+}
