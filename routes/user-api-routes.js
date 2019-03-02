@@ -5,6 +5,26 @@ const db = require("../models");
 // =============================================================
 module.exports = function(app) {
 
+  app.post("/api/users", function(req, res) {
+    db.User.create({
+      username: username,
+      biome_choice: $(".biome").val(),
+      // price_choice:,
+      // destination_match:
+    }).then(function(dbUser) {
+      res.json(dbUser);
+    });
+  });
+
+  app.get("/api/userresults", function(req, res) {
+      db.User.findOne({
+        // where: something,
+        // include: [db.destinations]
+      }).then(function(dbUser) {
+        res.json(dbUser);
+      });
+  }
+
   // GET route for getting all of the posts
 //   app.get("/api/survey", function(req, res) {
 //     var query = {};
@@ -20,4 +40,4 @@ module.exports = function(app) {
 //     }).then(function(dbPost) {
 //       res.json(dbPost);
 //     });
-//   });
+//   }
