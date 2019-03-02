@@ -11,6 +11,7 @@ module.exports = function (sequelize, DataTypes) {
         destination_match: {
             type: DataTypes.STRING,
             allowNull: false
+            default:
         }
     });
     return User;
