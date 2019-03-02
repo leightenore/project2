@@ -58,16 +58,39 @@
                 </div>
                 <div class="modal-body">
                     <p>Select tile to set budget. Hover an image to see more details.</p>
-                    <img id="lowCost" src="images/loose-change.jpg"
-                        alt="lowCost" class="img-thumbnail float-left">
-                    <img id="midCost" src="images/midmoney.jpg" 
-                        alt="midCost" class="img-thumbnail float-left">
-                    <img id="hiCost" src="images/istockphoto-185073997-1024x1024.jpg"
-                        alt="hiCost" class="img-thumbnail float-left">
+                    <img id="lowCost" src="images/loose-change.jpg" alt="lowCost" class="img-thumbnail float-left">
+                    <img id="midCost" src="images/midmoney.jpg" alt="midCost" class="img-thumbnail float-left">
+                    <img id="hiCost" src="images/istockphoto-185073997-1024x1024.jpg" alt="hiCost"
+                        class="img-thumbnail float-left">
                 </div>
             </div>
 
         </div>
+    </div>
+
+    <!-- Additional Modal -->
+    <div id="addmodal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Budget</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Select tile to set budget. Hover an image to see more details.</p>
+                    <img id="lowCost" src="images/loose-change.jpg" alt="lowCost" class="img-thumbnail float-left">
+                    <img id="midCost" src="images/midmoney.jpg" alt="midCost" class="img-thumbnail float-left">
+                    <img id="hiCost" src="images/istockphoto-185073997-1024x1024.jpg" alt="hiCost"
+                        class="img-thumbnail float-left">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal" id="surveySum">Submit</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
     </div>
 </body>
 
@@ -75,6 +98,8 @@
 
 <script>
     $.backstretch('images/botany-dark-green-plants-fern-1687341.jpg');
+
+    let dbarr = [];
 
     // shows the first modal when page is loaded
     window.onload = function () {
@@ -94,14 +119,36 @@
     // Click functions for results
     $('#rainBiome').on('click', function () {
         trigger('biome', 'money');
+        dbarr.push(this.id);
     });
 
     $('#tropicBiome').on('click', function () {
         trigger('biome', 'money');
+        dbarr.push(this.id);
     });
 
     $('#taigaBiome').on('click', function () {
         trigger('biome', 'money');
+        dbarr.push(this.id);
+    });
+
+    $('#lowCost').on('click', function () {
+        trigger('money', 'add');
+        dbarr.push(this.id);
+    });
+
+    $('#midCost').on('click', function () {
+        trigger('money', 'add');
+        dbarr.push(this.id);
+    });
+
+    $('#hiCost').on('click', function () {
+        trigger('money', 'add');
+        dbarr.push(this.id);
+    });
+
+    $('#surveySum').on('click', function() {
+        window.location = ('./results.html');
     });
 
 
