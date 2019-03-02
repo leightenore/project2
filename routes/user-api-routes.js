@@ -11,27 +11,14 @@ module.exports = function(app) {
     });
   });
 
-  //extract user object into a global variable so you can use it in the .get?
-
-  //   app.post("/api/results", function(req, res) {
-  //   for (let i = 0; i < resultsArray.length; i++) {
-  //     let results = resultsArray[i];
-  //   }
-  // });
-
-  app.get("/api/userresults", function(req, res) {
+  app.get("/api/users/:id", function(req, res) {
       db.User.findOne({
-        // where: something,
-        // include: [db.destinations]
+        where: {
+          id: req.params.id
+        },
+        include: [db.destinations]
       }).then(function(dbUser) {
         res.json(dbUser);
       });
-  }
-
-  // app.get(/whatever) {
-  //   userObject.biome =res[0].biome
-  // }.then (function() {
-  //   app.get() {
-
-  //   }
-  // })
+  });
+}
