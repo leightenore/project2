@@ -13,9 +13,7 @@ CREATE TABLE destinations (
 CREATE TABLE users (
 	id INTEGER auto_increment NOT NULL,
     username VARCHAR(255) NOT NULL,
-    userpassword VARCHAR(255) NOT NULL,
     biome_choice VARCHAR(255) NOT NULL,
-    price_point_choice VARCHAR(255) NOT NULL,
-    destination_match VARCHAR(255) NOT NULL,
+    price_choice VARCHAR(255) NOT NULL,
     PRIMARY KEY (id)
 );

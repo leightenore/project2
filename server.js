@@ -15,15 +15,16 @@ app.use(express.json());
 // Static directory
 app.use(express.static("public"));
 
-const exphbs = require("express-handlebars");
+// const exphbs = require("express-handlebars");
 
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-app.set("view engine", "handlebars");
+// app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+// app.set("view engine", "handlebars");
 
 // Routes
 // =============================================================
 require("./routes/html-routes.js")(app);
-require("./routes/api-routes.js")(app);
+require("./routes/user-api-routes.js")(app);
+require("./routes/destination-api-routes.js")(app);
 
 
 
