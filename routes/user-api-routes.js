@@ -5,8 +5,6 @@ const db = require("../models");
 // =============================================================
 module.exports = function(app) {
 
-  let userObject = {};
-
   app.post("/api/users", function(req, res) {
     db.User.create(req.body).then(function(dbUser) {
       res.json(dbUser);
