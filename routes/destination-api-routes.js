@@ -6,8 +6,8 @@ const db = require("../models");
 module.exports = function(app) {
 
   app.get("/api/destinations/:id", function(req, res) {
-      console.log(req.body);
       db.Destination.findAll({
+        attributes: ["destination"],
         where: {
           id: req.params.id
         }
