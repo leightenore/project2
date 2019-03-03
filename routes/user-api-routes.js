@@ -14,16 +14,14 @@ module.exports = function(app) {
   });
 
   app.get("/api/users/:id", function(req, res) {
-      userObject.biome = res[0].biome
-      db.User.findOne({
+      console.log(req.body);
+      db.User.findAll({
+        attributes: 
+          ["biome_choice", "price_choice"],
         where: {
           id: req.params.id
-        },
-        include: [db.destinations]
+        }
       }).then(function(dbUser) {
-        // app.get( , function(req,res) {
-
-        // }
         res.json(dbUser);
       });
   });
