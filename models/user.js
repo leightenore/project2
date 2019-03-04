@@ -1,4 +1,5 @@
 const Sequelize = require("sequelize");
+const Sequelize = require('sequelize');
 
 module.exports = function (sequelize, DataTypes) {
     const User = sequelize.define("User", {
@@ -7,13 +8,15 @@ module.exports = function (sequelize, DataTypes) {
             allowNull: false
         },
         biome_choice: {
-            type: DataTypes.STRING,
+            type: DataTypes.STRING, 
             allowNull: false
         },
         price_choice: {
             type: DataTypes.STRING,
             allowNull: false
         }
+    },{
+        timestamps: false
     });
     return User;
 };
