@@ -1,14 +1,16 @@
+const Sequelize = require("sequelize");
+
 module.exports = function (sequelize, DataTypes) {
     const User = sequelize.define("User", {
         username: {
             type: DataTypes.STRING,
             allowNull: false
         },
-        userpassword: {
+        biome_choice: {
             type: DataTypes.STRING,
             allowNull: false
         },
-        destination_match: {
+        price_choice: {
             type: DataTypes.STRING,
             allowNull: false
         }

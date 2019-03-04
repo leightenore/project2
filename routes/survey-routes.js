@@ -5,7 +5,7 @@ const db = require("../models");
 // =============================================================
 module.exports = function(app) {
 
-  // GET route for getting all of the posts
+//   GET route for getting all of the posts
 //   app.get("/api/survey", function(req, res) {
 //     var query = {};
 //     if (req.query.) {

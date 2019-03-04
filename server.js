@@ -15,10 +15,6 @@ app.use(express.json());
 // Static directory
 app.use(express.static("public"));
 
-const exphbs = require("express-handlebars");
-
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-app.set("view engine", "handlebars");
 
 // Routes
 // =============================================================

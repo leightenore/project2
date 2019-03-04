@@ -1,2 +1,2 @@
-INSERT INTO users (username, userpassword, biome_choice, price_point_choice)
-VALUES ;
+INSERT INTO users (username, biome_choice, price_choice)
+VALUES 

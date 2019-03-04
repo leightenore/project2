@@ -1,0 +1,31 @@
+{
+  "name": "project2",
+  "version": "1.0.0",
+  "description": "Destination Finder",
+  "main": "server.js",
+  "scripts": {
+    "test": "test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leightenore/project2.git"
+  },
+  "keywords": [
+    "Group",
+    "Project",
+    "2"
+  ],
+  "author": "Leigh, Kolton, Josh and Jenae",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leightenore/project2/issues"
+  },
+  "homepage": "https://github.com/leightenore/project2#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "mysql": "^2.16.0",
+    "mysql2": "^1.6.5",
+    "sequelize": "^4.42.1"
+  }
+}
