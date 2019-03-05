@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <!-- Backstretch CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" media="screen" href="css/reset.css" />
+    <link rel="stylesheet" media="screen" href="css/style.css" />
+
+</head>
+
+<body>
+
+    <!-- Biome Modal -->
+    <div id="biomemodal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Choose the Biome!</h4>
+                </div>
+                <div class="modal-body">
+                    <p>You will select tile that interests you the most. Hover an image to see more details.</p>
+                    <img id="rainBiome" src="images/Latin-America-Ecuador-Galapagos-Islands-Bartolome-Island-MH.jpg"
+                        alt="rainforest" class="img-thumbnail">
+                    <img id="tropicBiome" src="images/BeachfrontAccommodation.jpg" alt="tropic" class="img-thumbnail">
+                    <img id="taigaBiome" src="images/articles-finland-the-worlds-biggest-wilderness-monitotxi.jpg"
+                        alt="taiga" class="img-thumbnail">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Money Modal -->
+    <div id="moneymodal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Budget</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Select tile to set budget. Hover an image to see more details.</p>
+                    <img id="lowCost" src="images/loose-change.jpg" alt="lowCost" class="img-thumbnail float-left">
+                    <img id="midCost" src="images/midmoney.jpg" alt="midCost" class="img-thumbnail float-left">
+                    <img id="hiCost" src="images/istockphoto-185073997-1024x1024.jpg" alt="hiCost"
+                        class="img-thumbnail float-left">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Additional Modal -->
+    <div id="addmodal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Additonal</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Select tile to set additonal conditions. Hover an image to see more details.</p>
+                    <img id="lowCost" src="images/loose-change.jpg" alt="lowCost" class="img-thumbnail float-left">
+                    <img id="midCost" src="images/midmoney.jpg" alt="midCost" class="img-thumbnail float-left">
+                    <img id="hiCost" src="images/istockphoto-185073997-1024x1024.jpg" alt="hiCost"
+                        class="img-thumbnail float-left">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal" id="surveySum">Submit</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    $.backstretch('images/botany-dark-green-plants-fern-1687341.jpg');
+
+    let dbarr = [];
+
+    // shows the first modal when page is loaded
+    window.onload = function () {
+        $('#biomemodal').modal('show');
+    };
+
+    // tells what modal to hide and which to show when called
+    function trigger(first, second) {
+
+        let hide = '#' + first + 'modal';
+        let show = '#' + second + 'modal';
+
+        $(hide).modal('hide');
+        $(show).modal('show');
+    };
+
+    // Click functions for results
+    $('#rainBiome').on('click', function () {
+        trigger('biome', 'money');
+        dbarr.push(this.id);
+    });
+
+    $('#tropicBiome').on('click', function () {
+        trigger('biome', 'money');
+        dbarr.push(this.id);
+    });
+
+    $('#taigaBiome').on('click', function () {
+        trigger('biome', 'money');
+        dbarr.push(this.id);
+    });
+
+    $('#lowCost').on('click', function () {
+        trigger('money', 'add');
+        dbarr.push(this.id);
+    });
+
+    $('#midCost').on('click', function () {
+        trigger('money', 'add');
+        dbarr.push(this.id);
+    });
+
+    $('#hiCost').on('click', function () {
+        trigger('money', 'add');
+        dbarr.push(this.id);
+    });
+
+    $('#surveySum').on('click', function() {
+        $.post(userdata).then(function() {
+            window.location = ('./results.html');
+        });
+    });
+
+
+
+
+</script>
