@@ -42,14 +42,15 @@
 
             <!-- Modal content-->
             <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title">Choose your Biome!</h4>
+                <div class="modal-head">
+                    <h4>Choose your Biome!</h4>
                 </div>
                 <div class="modal-body ">
-                <div class="flexbox" id="biomesDiv">
+                    <div class="flexbox" id="biomesDiv">
 
                         <div id="desert" class="item container sepia">
-                            <img class="image" src="images/desert.jpg" height="460" />
+                            <img class="image" src="images/desert.jpg" />
+                            <!-- height="460"   -->
                             <div class="overlay">
                                 <div class="text underline">
                                     <h1>DESERT</h1>
@@ -58,7 +59,9 @@
                         </div>
 
                         <div id="forest" class="item container grayscale">
-                            <img class="image" src="images/forest.jpg" height="660" width="500" />
+                            <img class="image" src="images/forest.jpg" />
+                            <!-- height="660" width="500"  -->
+
                             <div class="overlay">
                                 <div class="text underline">
                                     <H1>FOREST</H1>
@@ -66,7 +69,8 @@
                             </div>
                         </div>
                         <div id="grassland" class="item container grayscale">
-                            <img class="image grayscale" src="images/grassland.jpg" height="650" width="480" />
+                            <img class="image grayscale" src="images/grassland.jpg" />
+                            <!-- height="650" width="480" /> -->
                             <div class="overlay">
                                 <div class="text underline">
                                     <H1>GRASSLAND</H1>
@@ -74,7 +78,8 @@
                             </div>
                         </div>
                         <div id="rainforest" class="item container sepia">
-                            <img class="image" src="images/rainforest.jpg" height="470" width="680" />
+                            <img class="image" src="images/rainforest.jpg" />
+                            <!-- height="470" width="680" /> -->
                             <div class="overlay">
                                 <div class="text underline">
                                     <H1>RAINFOREST</H1>
@@ -82,7 +87,8 @@
                             </div>
                         </div>
                         <div id="taiga" class="item container sepia">
-                            <img class="image" src="images/taiga.jpg" height="480" width="740" />
+                            <img class="image" src="images/taiga.jpg" />
+                            <!-- height="480" width="740" /> -->
                             <div class="overlay">
                                 <div class="text underline">
                                     <H1>TAIGA</H1>
@@ -98,7 +104,8 @@
                             </div>
                         </div>
                         <div id="tundra" class=" row item container grayscale">
-                            <img class="image" src="images/tundra.jpg" height="780" width="" />
+                            <img class="image" src="images/tundra.jpg" />
+                            <!-- height="780" width="" /> -->
                             <div class="overlay">
                                 <div class="text underline">
                                     <H1>TUNDRA</H1>
@@ -197,17 +204,33 @@
     };
 
     // Click functions for results
-    $('#rainBiome').on('click', function () {
+    $('#rainforest').on('click', function () {
         trigger('biome', 'money');
         dbarr.push(this.id);
     });
 
-    $('#tropicBiome').on('click', function () {
+    $('#tropical').on('click', function () {
         trigger('biome', 'money');
         dbarr.push(this.id);
     });
 
-    $('#taigaBiome').on('click', function () {
+    $('#taiga').on('click', function () {
+        trigger('biome', 'money');
+        dbarr.push(this.id);
+    });
+    $('#desert').on('click', function () {
+        trigger('biome', 'money');
+        dbarr.push(this.id);
+    });
+    $('#forest').on('click', function () {
+        trigger('biome', 'money');
+        dbarr.push(this.id);
+    });
+    $('#grassland').on('click', function () {
+        trigger('biome', 'money');
+        dbarr.push(this.id);
+    });
+    $('#tundra').on('click', function () {
         trigger('biome', 'money');
         dbarr.push(this.id);
     });
