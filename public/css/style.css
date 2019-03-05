@@ -167,3 +167,19 @@ body {
 /* END CSS FOR BIOMES.HTML */
 
 
+#start {
+    position: relative;
+    top: 900%;
+    opacity: 0.6;
+}
+.jumbotron {
+    background: transparent;
+    color: aliceblue;
+    position: relative;
+    top: 110%;
+    left: 75%;
+}
+.modal-body {
+    max-height: calc(100vh - 210px);
+    overflow-y: auto;
+}
