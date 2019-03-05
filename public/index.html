@@ -20,23 +20,15 @@
     <!-- CSS Links -->
     <link rel="stylesheet" media="screen" href="css/reset.css" />
     <link rel="stylesheet" media="screen" href="css/style.css" />
-
+    <link rel="stylesheet" type="text/css" href="./images/"/>
 </head>
 
 <body>
     <div class="container">
-        <div class="row">
-            <div>
-                <div class="jumbotron jumbotron-fluid">
-                    <h1 class="display-4">Off the Beaten Path..</h1>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col text-center">
-                <button id="start" type="button" class="btn btn-light btn-lg">Start Your Journey Here!</button>
-            </div>
-        </div>
+        <center><div class="jumbotron jumbotron-fluid justify-content-center" id="homeDiv">
+            <h1 class="display-3">OFF THE BEATEN PATH...</h1><br><br>
+            <center><button id="start" type="button" class="btn btn-light btn-lg">START YOUR JOURNEY HERE!</button></center>
+        </div></center>
     </div>
 </body>
 
@@ -49,7 +41,7 @@
         "images/articles-finland-the-worlds-biggest-wilderness-monitotxi.jpg"
     ], { duration: 5000, fade: 2000 });
 
-    $('#start').on('click', function() {
+    $('#start').on('click', function () {
         window.location = ('./survey.html');
     })
 </script>
