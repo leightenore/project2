@@ -57,15 +57,34 @@ body {
 }
 
 #tundra {
-  margin-left: 20%;
+  margin-left: 150px;
+  margin-right: 0px;
   align-items: center;
 }
 
 #tundraHeading {
-  left:36%
+  left:53%
 
 }
 
+
+@media only screen and (max-width: 600px) {
+  #tundra {
+    margin-left: 0 !important;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important; 
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+    margin-right: 0px !important;
+    align-items: center !important;
+    max-width: 80vw;
+  }
+  
+  #tundraHeading {
+    left:53%
+  
+  }
+}
 
 /* START OVERLAY STYLE */
 
