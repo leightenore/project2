@@ -1,24 +1,21 @@
 /* /* START CSS FOR BIOMES.HTML */
 
-@font-face {
-    font-family: Azedo;
-    src: url("Azedo.otf");
-  }
-  
-  div {
-    font-family: myFirstFont;
-  }
 
-
-* {
+/* * {
   box-sizing: border-box;
+} */
+
+@font-face {
+  font-family: Azedo;
+  src: url("Azedo.otf");
 }
 
 body {
   background-color: #333;
+  /* font-family: 'Montserrat Alternates', sans-serif; */
 }
 
-.flexbox {
+/* .flexbox {
   display: -webkit-flex;
   display: flex;
   -webkit-flex-direction: column;
@@ -60,10 +57,10 @@ body {
 
 /* START OVERLAY STYLE */
 
-.container {
+/* .container {
     position: relative; 
      width: 50%;
-  }
+  } */
   
   /* .image {
      display: block; 
@@ -71,7 +68,7 @@ body {
     height: auto;
   }  */
   
-  .overlay {
+  /* .overlay {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -99,7 +96,7 @@ body {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     text-align: center;
-}
+} */
 /* 
 .text:hover {
     text-decoration: underline;
@@ -109,12 +106,12 @@ body {
 /* ------------------------- */
 /* START GREYSCALE/SEPIA EFFECT */
 
-body {
+/* body {
     width: 100vw
-}
+} */
 
 /*GrayScale*/
-.grayscale img {
+/* .grayscale img {
 	-webkit-filter: grayscale(60%);
 	filter: grayscale(60%);
 	-webkit-transition: .3s ease-in-out;
@@ -123,10 +120,10 @@ body {
 .grayscale:hover img {
 	-webkit-filter: grayscale(0);
 	filter: grayscale(0);
-}
+} */
 
 /* SEPIA */
-.sepia img {
+/* .sepia img {
 	-webkit-filter: sepia(50%);
 	filter: sepia(50%);
 	-webkit-transition: .3s ease-in-out;
@@ -135,7 +132,7 @@ body {
 .sepia:hover img {
 	-webkit-filter: sepia(0);
 	filter: sepia(0);
-}
+} */
 /* END GREYSCALE/SEPIA EFFECT */
 /* ------------------------------ */
 /* underline effect */
@@ -144,7 +141,7 @@ body {
     text-decoration: none;
   } */
   
-  .underline::after {
+  /* .underline::after {
     content: "";
     display: block;
     width: 0;
@@ -164,22 +161,26 @@ body {
     transition: 1.2s ease-in-out;
   }
   
-/* END CSS FOR BIOMES.HTML */
+END CSS FOR BIOMES.HTML */
 
 
 #start {
-    position: relative;
     top: 900%;
-    opacity: 0.6;
+    opacity: 0.9;
 }
 .jumbotron {
     background: transparent;
     color: aliceblue;
-    position: relative;
-    top: 110%;
-    left: 75%;
+    font-family: Azedo;
+    src: url("Azedo.otf");
 }
 .modal-body {
     max-height: calc(100vh - 210px);
     overflow-y: auto;
+}
+
+#homeDiv {
+  width: 800px;
+  padding: 50px;
+  margin-top: 150px;
 }
