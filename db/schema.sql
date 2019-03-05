@@ -7,6 +7,9 @@ CREATE TABLE destinations (
     destination VARCHAR(255) NOT NULL,
     biome VARCHAR(255) NOT NULL,
     price_point VARCHAR(255) NOT NULL,
+    image_one VARCHAR(255) NOT NULL,
+    image_two VARCHAR(255) NOT NULL,
+    image_three VARCHAR(255) NOT NULL,
     PRIMARY KEY (id)
 );
 
