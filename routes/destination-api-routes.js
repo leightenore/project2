@@ -12,8 +12,15 @@ module.exports = function (app) {
       attributes: [sequelize.fn('max', sequelize.col('id'))],
       raw: true,
     }).then(function (data) {
-      return max = data[0]['max(`id`)'];
+      max = data[0]['max(`id`)'];
+
+      db.Destination.findAll({
+        where: {
+          id: max
+        }
+      })
     }).then(function (max) {
+      console.log(max);
       db.Destination.findAll({
         attributes: ["destination"],
         where: {
@@ -21,7 +28,6 @@ module.exports = function (app) {
         }
       }).then(function (dbDest) {
         res.json(dbDest);
-        console.log(dbDest);
       });
     });
   });
@@ -29,3 +35,5 @@ module.exports = function (app) {
 
 //need to find the destination name where the price point and biome match the users selections
 //if statement?
+
+// need to edit where statment to return matched location with the max id values not the one that matches the value itself
