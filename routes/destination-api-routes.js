@@ -1,19 +1,29 @@
 const path = require('path');
 const db = require("../models");
+const sequelize = require('sequelize');
 
 // Routes
 // =============================================================
-module.exports = function(app) {
+module.exports = function (app) {
 
-  app.get("/api/destinations/:id", function(req, res) {
+  app.get("/api/destinations/", function (req, res) {
+    let max = 0;
+    db.User.findAll({
+      attributes: [sequelize.fn('max', sequelize.col('id'))],
+      raw: true,
+    }).then(function (data) {
+      return max = data[0]['max(`id`)'];
+    }).then(function (max) {
       db.Destination.findAll({
         attributes: ["destination"],
         where: {
-          id: req.params.id
+          id: max
         }
-      }).then(function(dbDest) {
+      }).then(function (dbDest) {
         res.json(dbDest);
+        console.log(dbDest);
       });
+    });
   });
 }
 

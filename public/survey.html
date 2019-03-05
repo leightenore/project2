@@ -99,7 +99,11 @@
 <script>
     $.backstretch('images/botany-dark-green-plants-fern-1687341.jpg');
 
-    let dbarr = [];
+    let userdata = {
+        username: "auto-gen",
+        biome_choice: 'temp',
+        price_choice: 'temp'
+    };
 
     // shows the first modal when page is loaded
     window.onload = function () {
@@ -119,36 +123,36 @@
     // Click functions for results
     $('#rainBiome').on('click', function () {
         trigger('biome', 'money');
-        dbarr.push(this.id);
+        userdata.biome_choice = this.id;
     });
 
     $('#tropicBiome').on('click', function () {
         trigger('biome', 'money');
-        dbarr.push(this.id);
+        userdata.biome_choice = this.id;
     });
 
     $('#taigaBiome').on('click', function () {
         trigger('biome', 'money');
-        dbarr.push(this.id);
+        userdata.biome_choice = this.id;
     });
 
     $('#lowCost').on('click', function () {
         trigger('money', 'add');
-        dbarr.push(this.id);
+        userdata.price_choice = this.id;
     });
 
     $('#midCost').on('click', function () {
         trigger('money', 'add');
-        dbarr.push(this.id);
+        userdata.price_choice = this.id;
     });
 
     $('#hiCost').on('click', function () {
         trigger('money', 'add');
-        dbarr.push(this.id);
+        userdata.price_choice = this.id;
     });
 
     $('#surveySum').on('click', function() {
-        $.post(userdata).then(function() {
+        $.post('/api/users', userdata).then(function() {
             window.location = ('./results.html');
         });
     });
