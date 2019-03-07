@@ -175,9 +175,11 @@
 </html>
 
 <script>
+
     
         $.backstretch('images/botany-dark-green-plants-fern-1687341.jpg');
     
+
 
     let userdata = {
         username: "auto-gen",
@@ -190,28 +192,22 @@
 
         $('#biomemodal').modal('show');
     };
-
     // tells what modal to hide and which to show when called
     function trigger(first, second) {
-
         let hide = '#' + first + 'modal';
         let show = '#' + second + 'modal';
-
         $(hide).modal('hide');
         $(show).modal('show');
     };
-
     // Click functions for results
     $('#rainforest').on('click', function () {
         trigger('biome', 'money');
         userdata.biome_choice = this.id;
     });
-
     $('#tropical').on('click', function () {
         trigger('biome', 'money');
         userdata.biome_choice = this.id;
     });
-
     $('#taiga').on('click', function () {
         trigger('biome', 'money');
         userdata.biome_choice = this.id;
@@ -232,30 +228,23 @@
         trigger('biome', 'money');
         userdata.biome_choice = this.id;
     });
-
     $('#lowCost').on('click', function () {
         trigger('money', 'add');
         userdata.price_choice = this.id;
     });
-
     $('#midCost').on('click', function () {
         trigger('money', 'add');
         userdata.price_choice = this.id;
     });
-
     $('#hiCost').on('click', function () {
         trigger('money', 'add');
         userdata.price_choice = this.id;
     });
 
-
     $('#surveySum').on('click', function () {
         $.post('/api/users', userdata).then(function () {
-            window.location = ('./results.html');
+            window.location.href = "/results";
+
         });
     });
-
-
-
-
 </script>

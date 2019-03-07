@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <head>
+
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Home</title>
@@ -17,10 +18,11 @@
         <!-- Backstretch CDN -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
 
+
     <!-- CSS Links -->
     <link rel="stylesheet" media="screen" href="css/reset.css" />
     <link rel="stylesheet" media="screen" href="css/style.css" />
-    <link rel="stylesheet" type="text/css" href="./images/"/>
+    <link rel="stylesheet" type="text/css" href="./images/" />
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 </head>
 
@@ -57,35 +59,25 @@
                     </a>
                 </div>
             </div>
-        </div>
+        </div><br>
         <div class="row" id="resultsCaption">
             Your Perfect Vacation Destination is <span id="destination"></span>!
         </div>
     </div>
 </body>
-<script>
-    $.backstretch('images/botany-dark-green-plants-fern-1687341.jpg');
-    
-
-</script>
 
 <script>
     $.backstretch('images/botany-dark-green-plants-fern-1687341.jpg');
 
-    window.onload = function () {
-        $.ajax({
-            url: "/api/destinations/,
-            method: "GET",
-            data: 
-        }, function (req, res) {
-           
-        }).then(function (result) {
-                $("#carousel1").attr("src", "");
-                $("#carousel2").attr("src", "");
-                $("#carousel3").attr("src", "");
-                $("#destination").text("");
-            });
-    }
+    // window.onload = function() {
+    //     $.get("/api/destinations/", userdata).then(function() {
+    //         console.log(userdata);
+    //         // $("#destination").append("");
+    //         // $("#carousel1").("src", "");
+    //         // $("#carousel2").attr("src", "");
+    //         // $("#carousel3").attr("src", "");
+    //     });
+    // }
 </script>
 
 </html>
