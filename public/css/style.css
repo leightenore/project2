@@ -12,9 +12,9 @@ div {
 * {
 box-sizing: border-box;
 }
-body {
+/* body {
 background-image: url(https://images.unsplash.com/photo-1489551917489-bddbe72c6734?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1868&q=80)
-}
+} */
 .flexbox {
 display: -webkit-flex;
 display: flex;
