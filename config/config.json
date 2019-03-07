@@ -1,7 +1,9 @@
 {
   "development": {
     "username": "root",
-    "password": "root",
+
+    "password": "root1234",
+
     "database": "destinations_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
@@ -9,14 +11,14 @@
   "test": {
     "username": "root",
     "password": "root1234",
-    "database": "database_test",
+    "database": "destinations_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
     "username": "root",
     "password": "root1234",
-    "database": "database_production",
+    "database": "destinations_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   }
