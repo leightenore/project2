@@ -67,15 +67,28 @@
 <script>
     $.backstretch('images/botany-dark-green-plants-fern-1687341.jpg');
 
-    // window.onload = function() {
-    //     $.get("/api/destinations/", userdata).then(function() {
-    //         console.log(userdata);
-    //         // $("#destination").append("");
-    //         // $("#carousel1").("src", "");
-    //         // $("#carousel2").attr("src", "");
-    //         // $("#carousel3").attr("src", "");
-    //     });
-    // }
+    let destinationMatch = {
+        destination: destination,
+        biome_choice: biome_choice,
+        price_choice: price_choice,
+        image_one: image_one,
+        image_two: image_two,
+        image_three: image_three
+    };
+    window.onload = function () {
+        $.get("/api/destinations/", destinationMatch, function (req, res) {
+            db.Destination.findOne({
+                include: [db.User]
+            }).then(function (destinationMatch) {
+                console.log(destinationMatch);
+                // $("#destination").append("");
+                // $("#carousel1").("src", "");
+                // $("#carousel2").attr("src", "");
+                // $("#carousel3").attr("src", "");
+            });
+        }
+        )
+    }
 </script>
 
 </html>
