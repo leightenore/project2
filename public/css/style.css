@@ -1,167 +1,223 @@
+/* font-family: 'Source Sans Pro', sans-serif; */
+
 /* /* START CSS FOR BIOMES.HTML */
-
-
-/* * {
-  box-sizing: border-box;
-} */
-
 @font-face {
   font-family: Azedo;
   src: url("Azedo.otf");
 }
 
-body {
-  background-color: #333;
-  /* font-family: 'Montserrat Alternates', sans-serif; */
+div {
+  font-family: Azedo;
 }
-
-/* .flexbox {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: column;
-  flex-direction: column;
-  -webkit-flex-wrap: wrap;
-  flex-wrap: wrap;
-  height: 100vw;
-  width: 100vw;
+* {
+box-sizing: border-box;
+}
+/* body {
+background-image: url(https://images.unsplash.com/photo-1489551917489-bddbe72c6734?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1868&q=80)
+} */
+.flexbox {
+display: -webkit-flex;
+display: flex;
+-webkit-flex-direction: column;
+flex-direction: column;
+-webkit-flex-wrap: wrap;
+flex-wrap: wrap;
+height: 100%;
+width: 100% !important;
+overflow: hidden;
 }
 .flexbox .item {
-  position: relative;
-  width: 33.33%;
+position: relative;
+width: 33.33%;
 }
 .flexbox .item img {
-  width: 100%;
-  display: block;
-  transition: all .8s;
+width: 100%;
+display: block;
+transition: all .8s;
 }
-
 @media (max-width: 860px) {
-  .flexbox {
-    height: 220vw;
-  }
-  .flexbox .item {
-    width: 50%;
-  }
+.flexbox {
+  height: 220vw;
+}
+.flexbox .item {
+  width: 50%;
+}
 }
 @media (max-width: 667px) {
-  .flexbox {
-    height: auto;
-  }
-  .flexbox .item {
-    width: 100%;
-  }
+.flexbox {
+  height: auto;
+}
+.flexbox .item {
+  width: 100%;
+}
+}
+#tundra {
+margin-left: 0px !important;
+margin-right: 0px;
+align-items: center;
+}
+#tundraHeading {
+left:53%
+}
+@media only screen and (max-width: 600px) {
+#tundra {
+  margin-left: 0 !important;
+  padding-top: 0px !important;
+  padding-bottom: 0px !important; 
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+  margin-right: 0px !important;
+  align-items: center !important;
+  max-width: 80vw;
 }
 
+#tundraHeading {
+  left:53%
 
-
-
+}
+}
 /* START OVERLAY STYLE */
+.container {
+  position: relative; 
+   /* width: 50%; */
+    width: 100% !important;
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+    margin-right: 0;
+    margin-left: 0;
+}
 
-/* .container {
-    position: relative; 
-     width: 50%;
-  } */
-  
-  /* .image {
-     display: block; 
-     width: 100%; 
-    height: auto;
-  }  */
-  
-  /* .overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: 1s ease;
-    background-color: transparent;
-  }
-  
-  .container:hover .overlay {
-    opacity: 1;
-  }
-  
-  .text {
-    color: white;
-    font-size: 30px;
-    position: absolute;
-    font-family: Azedo;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center;
-} */
+/* .image {
+   display: block; 
+   width: 100%; 
+  height: auto;
+}  */
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 1s ease;
+  background-color: transparent;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 30px;
+  position: absolute;
+  font-family: Azedo;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
 /* 
 .text:hover {
-    text-decoration: underline;
-    transition: 2s ease;
-          } */
+  text-decoration: underline;
+  transition: 2s ease;
+        } */
 /*END OVERLAY STYLE    */
 /* ------------------------- */
 /* START GREYSCALE/SEPIA EFFECT */
-
-/* body {
-    width: 100vw
-} */
-
+body {
+  width: 100vw
+}
 /*GrayScale*/
-/* .grayscale img {
-	-webkit-filter: grayscale(60%);
-	filter: grayscale(60%);
-	-webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
+.grayscale img {
+  -webkit-filter: grayscale(60%);
+  filter: grayscale(60%);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
 }
 .grayscale:hover img {
-	-webkit-filter: grayscale(0);
-	filter: grayscale(0);
-} */
-
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+}
 /* SEPIA */
-/* .sepia img {
-	-webkit-filter: sepia(50%);
-	filter: sepia(50%);
-	-webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
+.sepia img {
+  -webkit-filter: sepia(50%);
+  filter: sepia(50%);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
 }
 .sepia:hover img {
-	-webkit-filter: sepia(0);
-	filter: sepia(0);
-} */
+  -webkit-filter: sepia(0);
+  filter: sepia(0);
+}
+.toUpper
+{
+font-size: 50px;
+}
 /* END GREYSCALE/SEPIA EFFECT */
 /* ------------------------------ */
 /* underline effect */
 /* 
-  .cool-link {
-    text-decoration: none;
-  } */
-  
-  /* .underline::after {
-    content: "";
-    display: block;
-    width: 0;
-    height: 5px;
-    background: rgb(174, 82, 82);
-    transition: width 1s;
-    color: rgb(174, 82, 82);
-  }
-  
-  .underline:hover::after {
-    width: 100%;
-    color: rgb(174, 82, 82);
-  }
+.cool-link {
+  text-decoration: none;
+} */
 
-  .underline:hover {
-    color: rgb(174, 82, 82);
-    transition: 1.2s ease-in-out;
-  }
-  
-END CSS FOR BIOMES.HTML */
+.underline::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 5px;
+  background: rgb(174, 82, 82);
+  transition: width 1s;
+  color: rgb(174, 82, 82);
+}
+
+.underline:hover::after {
+  width: 100%;
+  color: rgb(174, 82, 82);
+}
+.underline:hover {
+  color: rgb(174, 82, 82);
+  transition: 1.2s ease-in-out;
+}
+
+
+/* END CSS FOR BIOMES.HTML */
+/* #start {
+  position: relative;
+  top: 900%;
+  opacity: 0.6;
+}
+.jumbotron {
+  background: transparent;
+  color: aliceblue;
+  position: relative;
+  top: 110%;
+  left: 75%;
+}
+.modal-body {
+  max-height: calc(100vh - 210px);
+  overflow-y: auto;
+} */
+/* END CSS FOR BIOMES */
+
+h4{
+  font-family: 'Source Sans Pro', sans-serif; 
+  text-align: center;
+  margin: 3% 0 0 0;
+  padding: 5%;
+
+}
+p{
+  font-family: 'Source Sans Pro', sans-serif; 
+  text-align: center;
+  margin: 0 0 5% 0;
+}
 
 
 #start {
@@ -176,15 +232,17 @@ END CSS FOR BIOMES.HTML */
 }
 .modal-body {
     max-height: calc(100vh - 210px);
+    max-width: 100vw;
     overflow-y: auto;
 }
 
 #homeDiv {
   width: 100%;
-  margin-top: 10%;
 }
 
 #resultsCaption {
   color: aliceblue;
   font-size: 3rem;
+  margin: 10% 15% 0 15%;
+
 }
