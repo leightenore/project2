@@ -2,31 +2,12 @@
 
 /* /* START CSS FOR BIOMES.HTML */
 @font-face {
-<<<<<<< HEAD
-    font-family: Azedo;
-    src: url("Azedo.otf");
-  }
-
-  
-  div {
-    font-family: Azedo;
-  }
-
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  background-image: url(https://images.unsplash.com/photo-1489551917489-bddbe72c6734?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1868&q=80)
-=======
   font-family: Azedo;
   src: url("Azedo.otf");
 }
 
 div {
   font-family: Azedo;
->>>>>>> fe117b42a2c030212950754f1d3e0ae87a247a2a
 }
 * {
 box-sizing: border-box;
@@ -35,16 +16,6 @@ box-sizing: border-box;
 background-image: url(https://images.unsplash.com/photo-1489551917489-bddbe72c6734?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1868&q=80)
 } */
 .flexbox {
-<<<<<<< HEAD
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: column;
-  flex-direction: column;
-  -webkit-flex-wrap: wrap;
-  flex-wrap: wrap;
-  height: 73vw;
-  width: 100vw;
-=======
 display: -webkit-flex;
 display: flex;
 -webkit-flex-direction: column;
@@ -54,7 +25,6 @@ flex-wrap: wrap;
 height: 100%;
 width: 100% !important;
 overflow: hidden;
->>>>>>> fe117b42a2c030212950754f1d3e0ae87a247a2a
 }
 .flexbox .item {
 position: relative;
@@ -101,91 +71,13 @@ left:53%
   max-width: 80vw;
 }
 
-<<<<<<< HEAD
-#tundra {
-  margin-left: 150px;
-  margin-right: 0px;
-  align-items: center;
-}
-
-#tundraHeading {
-  left:53%
-
-}
-
-
-@media only screen and (max-width: 600px) {
-  #tundra {
-    margin-left: 0 !important;
-    padding-top: 0px !important;
-    padding-bottom: 0px !important; 
-    padding-right: 0px !important;
-    padding-left: 0px !important;
-    margin-right: 0px !important;
-    align-items: center !important;
-    max-width: 80vw;
-  }
-  
-  #tundraHeading {
-    left:53%
-  
-  }
-}
-
-=======
 #tundraHeading {
   left:53%
 
 }
 }
->>>>>>> fe117b42a2c030212950754f1d3e0ae87a247a2a
 /* START OVERLAY STYLE */
 .container {
-<<<<<<< HEAD
-    position: relative; 
-     /* width: 50%; */
-      width: 100%;
-      padding-right: 0px !important;
-      padding-left: 0px !important;
-      margin-right: 0;
-      margin-left: 0;
-  }
-  
-  /* .image {
-     display: block; 
-     width: 100%; 
-    height: auto;
-  }  */
-  
-  .overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: 1s ease;
-    background-color: transparent;
-  }
-  
-  .container:hover .overlay {
-    opacity: 1;
-  }
-  
-  .text {
-    color: white;
-    font-size: 30px;
-    position: absolute;
-    font-family: Azedo;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center;
-=======
   position: relative; 
    /* width: 50%; */
     width: 100% !important;
@@ -229,7 +121,6 @@ left:53%
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
->>>>>>> fe117b42a2c030212950754f1d3e0ae87a247a2a
 }
 /* 
 .text:hover {
@@ -267,11 +158,6 @@ body {
 .toUpper
 {
 font-size: 50px;
-}
-
-.toUpper
-{
- font-size: 50px;
 }
 /* END GREYSCALE/SEPIA EFFECT */
 /* ------------------------------ */
