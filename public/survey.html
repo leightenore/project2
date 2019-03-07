@@ -11,27 +11,17 @@
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
     <!-- Bootstrap CDN -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
     <!-- Backstretch CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 
     <!-- CSS Links -->
     <link rel="stylesheet" media="screen" href="css/reset.css" />
     <link rel="stylesheet" media="screen" href="css/style.css" />
     <link rel="stylesheet" type="text/css" href="./images/" />
-
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 </head>
 
 <body>
@@ -186,34 +176,31 @@
 <script>
     $.backstretch('images/botany-dark-green-plants-fern-1687341.jpg');
 
-    let dbarr = [];
-
+    let userdata = {
+        username: "auto-gen",
+        biome_choice: 'temp',
+        price_choice: 'temp'
+    };
     // shows the first modal when page is loaded
     window.onload = function () {
         $('#biomemodal').modal('show');
     };
-
     // tells what modal to hide and which to show when called
     function trigger(first, second) {
-
         let hide = '#' + first + 'modal';
         let show = '#' + second + 'modal';
-
         $(hide).modal('hide');
         $(show).modal('show');
     };
-
     // Click functions for results
     $('#rainforest').on('click', function () {
         trigger('biome', 'money');
-        dbarr.push(this.id);
+        userdata.biome_choice = this.id;
     });
-
     $('#tropical').on('click', function () {
         trigger('biome', 'money');
-        dbarr.push(this.id);
+        userdata.biome_choice = this.id;
     });
-
     $('#taiga').on('click', function () {
         trigger('biome', 'money');
         dbarr.push(this.id);
@@ -232,31 +219,23 @@
     });
     $('#tundra').on('click', function () {
         trigger('biome', 'money');
-        dbarr.push(this.id);
+        userdata.biome_choice = this.id;
     });
-
     $('#lowCost').on('click', function () {
         trigger('money', 'add');
-        dbarr.push(this.id);
+        userdata.price_choice = this.id;
     });
-
     $('#midCost').on('click', function () {
         trigger('money', 'add');
-        dbarr.push(this.id);
+        userdata.price_choice = this.id;
     });
-
     $('#hiCost').on('click', function () {
         trigger('money', 'add');
-        dbarr.push(this.id);
+        userdata.price_choice = this.id;
     });
-
     $('#surveySum').on('click', function () {
-        $.post(userdata).then(function () {
-            window.location = ('./results.html');
+        $.post('/api/users', userdata).then(function () {
+            window.location.href = "/results";
         });
     });
-
-
-
-
 </script>

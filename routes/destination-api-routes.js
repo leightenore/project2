@@ -3,16 +3,34 @@ const db = require("../models");
 
 // Routes
 // =============================================================
-module.exports = function(app) {
+module.exports = function (app) {
 
-  app.get("/api/destinations/:id", function(req, res) {
+  app.get("/api/destinations/", function (req, res) {
+    let max = 0;
+    db.User.findAll({
+      attributes: [sequelize.fn('max', sequelize.col('id'))],
+      raw: true,
+    }).then(function (data) {
+      max = data[0]['max(`id`)'];
+
+      db.Destination.findAll({
+        where: {
+          id: max
+        }
+      })
+    }).then(function (max) {
+      console.log(max);
       db.Destination.findAll({
         attributes: ["destination"],
         where: {
-          id: req.params.id
+          id: max
         }
-      }).then(function(dbDest) {
+      }).then(function (dbDest) {
         res.json(dbDest);
       });
+    });
   });
+
+// need to edit where statment to return matched location with the max id values not the one that matches the value itself
+
 }
