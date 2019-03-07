@@ -169,6 +169,11 @@ body {
 	-webkit-filter: sepia(0);
 	filter: sepia(0);
 }
+
+.toUpper
+{
+ font-size: 50px;
+}
 /* END GREYSCALE/SEPIA EFFECT */
 /* ------------------------------ */
 /* underline effect */
