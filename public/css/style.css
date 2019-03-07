@@ -238,5 +238,11 @@ p{
 
 #homeDiv {
   width: 100%;
+}
+
+#resultsCaption {
+  color: aliceblue;
+  font-size: 3rem;
   margin: 10% 15% 0 15%;
+
 }

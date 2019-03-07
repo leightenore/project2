@@ -16,6 +16,3 @@ module.exports = function(app) {
       });
   });
 }
-
-//need to find the destination name where the price point and biome match the users selections
-//if statement?
