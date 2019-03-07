@@ -136,7 +136,7 @@
                     <p>Select tile to set budget. Hover an image to see more details.</p>
                     <img id="lowCost" src="images/loose-change.jpg" alt="lowCost" class="img-thumbnail float-left">
                     <img id="midCost" src="images/midmoney.jpg" alt="midCost" class="img-thumbnail float-left">
-                    <img id="hiCost" src="images/istockphoto-185073997-1024x1024.jpg" alt="hiCost"
+                    <img id="highCost" src="images/istockphoto-185073997-1024x1024.jpg" alt="highCost"
                         class="img-thumbnail float-left">
                 </div>
             </div>
@@ -158,7 +158,7 @@
                     <p>Select tile to set additonal conditions. Hover an image to see more details.</p>
                     <img id="lowCost" src="images/loose-change.jpg" alt="lowCost" class="img-thumbnail float-left">
                     <img id="midCost" src="images/midmoney.jpg" alt="midCost" class="img-thumbnail float-left">
-                    <img id="hiCost" src="images/istockphoto-185073997-1024x1024.jpg" alt="hiCost"
+                    <img id="highCost" src="images/istockphoto-185073997-1024x1024.jpg" alt="highCost"
                         class="img-thumbnail float-left">
                 </div>
                 <div class="modal-footer">
@@ -177,9 +177,9 @@
     $.backstretch('images/botany-dark-green-plants-fern-1687341.jpg');
 
     let userdata = {
-        username: "auto-gen",
-        biome_choice: 'temp',
-        price_choice: 'temp'
+        username: "auto",
+        biome_choice: "",
+        price_choice: ""
     };
     // shows the first modal when page is loaded
     window.onload = function () {
@@ -193,31 +193,31 @@
         $(show).modal('show');
     };
     // Click functions for results
-    $('#rainforest').on('click', function () {
+    $('#rainforestDiv').on('click', function () {
         trigger('biome', 'money');
         userdata.biome_choice = this.id;
     });
-    $('#tropical').on('click', function () {
+    $('#tropicalDiv').on('click', function () {
         trigger('biome', 'money');
         userdata.biome_choice = this.id;
     });
-    $('#taiga').on('click', function () {
+    $('#taigaDiv').on('click', function () {
         trigger('biome', 'money');
-        dbarr.push(this.id);
+        userdata.biome_choice = this.id;
     });
-    $('#desert').on('click', function () {
+    $('#desertDiv').on('click', function () {
         trigger('biome', 'money');
-        dbarr.push(this.id);
+        userdata.biome_choice = this.id;
     });
-    $('#forest').on('click', function () {
+    $('#forestDiv').on('click', function () {
         trigger('biome', 'money');
-        dbarr.push(this.id);
+        userdata.biome_choice = this.id;
     });
-    $('#grassland').on('click', function () {
+    $('#grasslandDiv').on('click', function () {
         trigger('biome', 'money');
-        dbarr.push(this.id);
+        userdata.biome_choice = this.id;
     });
-    $('#tundra').on('click', function () {
+    $('#tundraDiv').on('click', function () {
         trigger('biome', 'money');
         userdata.biome_choice = this.id;
     });
@@ -229,13 +229,14 @@
         trigger('money', 'add');
         userdata.price_choice = this.id;
     });
-    $('#hiCost').on('click', function () {
+    $('#highCost').on('click', function () {
         trigger('money', 'add');
         userdata.price_choice = this.id;
     });
     $('#surveySum').on('click', function () {
         $.post('/api/users', userdata).then(function () {
             window.location.href = "/results";
+            console.log(userdata);
         });
     });
 </script>
