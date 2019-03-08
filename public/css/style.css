@@ -280,3 +280,6 @@ p{
 .lead {
   font-size: 50px;
 }
+#resultsCaption{
+  font-family: 'Source Sans Pro', sans-serif;
+}
