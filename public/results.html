@@ -68,30 +68,15 @@
 
 <script>
     $.backstretch('images/botany-dark-green-plants-fern-1687341.jpg');
-
-    let destinationMatch = {
-        destination: "",
-        biome_choice: "",
-        price_choice: "",
-        image_one: "",
-        image_two: "",
-        image_three: ""
-    };
-
     window.onload = function () {
-        $.get("/api/destinations/", destinationMatch, function (req, res) {
-            db.Destination.findAll({
-                include: [db.User]
-            }).then(function (destinationMatch) {
-                console.log("test");
-                // $("#destination").append("");
-                // $("#carousel1").("src", "");
-                // $("#carousel2").attr("src", "");
-                // $("#carousel3").attr("src", "");
-            });
-        }
-        )
-    }
+       apicall = $.get('/api/destinations', function (data) {
+           console.log(data);
+           $("#destination").append(data[0].destination);
+           $("#carousel1").attr("src", data[0].image_one);
+           $("#carousel2").attr("src", data[0].image_two);
+           $("#carousel3").attr("src", data[0].image_three);
+       });
+   }
 </script>
 
 </html>

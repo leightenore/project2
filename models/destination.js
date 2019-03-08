@@ -1,6 +1,5 @@
 const Sequelize = require('sequelize');
-const Userpg = require("./user.js");
-
+const User = require("./user.js");
 
 module.exports = function (sequelize, DataTypes) {
     const Destination = sequelize.define("Destination", {
@@ -15,28 +14,22 @@ module.exports = function (sequelize, DataTypes) {
         price_choice: {
             type: DataTypes.STRING,
             allowNull: false
-        // },
-        // image_one: {
-        //     type: DataTypes.STRING, 
-        //     allowNull: true
-        // },
-        // image_two: {
-        //     type: DataTypes.STRING, 
-        //     allowNull: true
-        // },
-        // image_three: {
-        //     type: DataTypes.STRING, 
-        //     allowNull: true
+        },
+        image_one: {
+            type: DataTypes.STRING, 
+            allowNull: true
+        },
+        image_two: {
+            type: DataTypes.STRING, 
+            allowNull: true
+        },
+        image_three: {
+            type: DataTypes.STRING, 
+            allowNull: true
          }
     },{
         timestamps: false
     });
 
-    Destination.associate = function(models) {
-        Destination.belongsTo(models.User, {
-            foreignKey: "price_choice"
-        });
-    };  
-      
     return Destination;
 };
