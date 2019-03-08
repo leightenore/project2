@@ -260,3 +260,12 @@ p{
 .lead {
   font-size: 50px;
 }
+#resultsCaption{
+  font-family: 'Source Sans Pro', sans-serif;
+}
+#surveySum{
+  font-family: 'Source Sans Pro', sans-serif;
+  border-radius: 15px;
+  background-color: rgb(39, 50, 101);
+  color: white;
+}

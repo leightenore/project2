@@ -134,11 +134,35 @@
                     <h4 class="modal-title">Budget</h4>
                 </div>
                 <div class="modal-body">
-                    <p>Select tile to set budget. Hover an image to see more details.</p>
-                    <img id="lowCost" src="images/loose-change.jpg" alt="lowCost" class="img-thumbnail float-left">
-                    <img id="midCost" src="images/midmoney.jpg" alt="midCost" class="img-thumbnail float-left">
-                    <img id="highCost" src="images/istockphoto-185073997-1024x1024.jpg" alt="highCost"
-                        class="img-thumbnail float-left">
+                    <p>How much $$$ do you want to spend?</p>
+                    <div class="flexbox" id="priceDiv">
+
+                        <div id="lowCost" value="$" class="item container sepia">
+                            <img class="image" src="images/loose-change.jpg" height="460" />
+                            <div class="overlay">
+                                <div class="text underline">
+                                    <h1 style="font-size: 180px;">$</h1>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <div id="midCost" value="$$" class="item container sepia">
+                            <img class="image" src="images/midmoney.jpg" height="660" width="500" />
+                            <div class="overlay">
+                                <div class="text underline">
+                                        <h1 style="font-size: 180px;">$$</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="highCost" value="$$$" class="item container sepia">
+                            <img class="image grayscale" src="images/largemoney.jpg" height="650" width="480" />
+                            <div class="overlay">
+                                <div class="text underline">
+                                        <h1 style="font-size: 180px;">$$$</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -153,17 +177,20 @@
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-head">
-                    <h4 class="modal-title">Additonal</h4>
+                    <h4 class="modal-title">Are you ready?</h4>
                 </div>
                 <div class="modal-body">
-                    <p>Select tile to set additonal conditions. Hover an image to see more details.</p>
+                    <p>Let's see where off the beaten path you should travel?</p>
+                    <!-- <p>Select tile to set additonal conditions. Hover an image to see more details.</p>
                     <img id="lowCost" src="images/loose-change.jpg" alt="lowCost" class="img-thumbnail float-left">
                     <img id="midCost" src="images/midmoney.jpg" alt="midCost" class="img-thumbnail float-left">
                     <img id="highCost" src="images/istockphoto-185073997-1024x1024.jpg" alt="highCost"
                         class="img-thumbnail float-left">
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal" id="surveySum">SUBMIT</button>
+                <div class="modal-footer"> -->
+                    <center>
+                    <button type="button" class="btn btn-default" data-dismiss="modal" id="surveySum">SHOW ME!</button>
+                </center>
                 </div>
             </div>
         </div>
@@ -175,21 +202,16 @@
 </html>
 
 <script>
-
     
         $.backstretch('images/botany-dark-green-plants-fern-1687341.jpg');
     
-
-
     let userdata = {
         username: "user",
         biome_choice: "",
         price_choice: ""
     };
-
     // shows the first modal when page is loaded
     window.onload = function () {
-
         $('#biomemodal').modal('show');
     };
     // tells what modal to hide and which to show when called
@@ -240,12 +262,10 @@
         trigger('money', 'add');
         userdata.price_choice = this.id;
     });
-
     $('#surveySum').on('click', function () {
         $.post('/api/users', userdata).then(function () {
             window.location.href = "/results";
             console.log(userdata);
-
         });
     });
 </script>
