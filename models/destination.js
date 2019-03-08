@@ -32,10 +32,9 @@ module.exports = function (sequelize, DataTypes) {
     });
 
     Destination.associate = function(models) {
-        Destination.belongsTo(models.User, {
-            foreignKey: {
-                allowNull: false
-            }
+        Destination.hasMany(models.User, {
+            foreignKey: "price_choice",
+            foreignKey: "biome_choice"
         });
     };    
     return Destination;

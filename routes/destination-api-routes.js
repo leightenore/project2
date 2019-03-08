@@ -14,7 +14,7 @@ module.exports = function (app) {
         price_choice: db.User.price_choice }
       }]
     }).then(function(data) {
-      console.log(data);
+      console.log(data[0]);
   });
   // app.get("/api/destinations/", function (req, res) {
   //   let max = 0;

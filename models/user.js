@@ -25,10 +25,9 @@ module.exports = function (sequelize, DataTypes) {
     });
 
     User.associate = function(models) {
-        User.hasOne(models.Destination, {
-            foreignKey: {
-                onDelete: "cascade"
-            }
+        User.belongsTo(models.Destination, {
+            foreignKey: "price_choice",
+            foreignKey: "biome_choice"
         });
     };
     return User;
