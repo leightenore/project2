@@ -1,4 +1,5 @@
 const Sequelize = require('sequelize');
+const User = require("./user.js");
 
 module.exports = function (sequelize, DataTypes) {
     const Destination = sequelize.define("Destination", {
@@ -6,16 +7,29 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.STRING,
             allowNull: false
         },
-        biome: {
+        biome_choice: {
             type: DataTypes.STRING, 
             allowNull: false
         },
-        price_point: {
+        price_choice: {
             type: DataTypes.STRING,
             allowNull: false
-        }
+        },
+        image_one: {
+            type: DataTypes.STRING, 
+            allowNull: true
+        },
+        image_two: {
+            type: DataTypes.STRING, 
+            allowNull: true
+        },
+        image_three: {
+            type: DataTypes.STRING, 
+            allowNull: true
+         }
     },{
         timestamps: false
     });
+
     return Destination;
 };

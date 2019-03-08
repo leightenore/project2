@@ -1,21 +1,27 @@
 const path = require('path');
 const db = require("../models");
+const sequelize = require('sequelize');
 
 // Routes
 // =============================================================
-module.exports = function(app) {
+module.exports = function (app) {
 
-  app.get("/api/destinations/:id", function(req, res) {
+  app.get("/api/destinations", function (req, res) {
+    db.User.findAll({
+      limit: 1,
+      order: [['id', 'DESC']]
+    }).then(function (entries) {
+
       db.Destination.findAll({
-        attributes: ["destination"],
         where: {
-          id: req.params.id
+          biome_choice: entries[0].biome_choice,
+          price_choice: entries[0].price_choice
         }
-      }).then(function(dbDest) {
-        res.json(dbDest);
+      }).then(function (result) {
+        res.json(result);
+        console.log(result[0]);
       });
-  });
-}
+    })
+  })
+};
 
-//need to find the destination name where the price point and biome match the users selections
-//if statement?

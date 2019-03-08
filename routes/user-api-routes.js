@@ -8,6 +8,7 @@ module.exports = function(app) {
   app.post("/api/users", function(req, res) {
     db.User.create(req.body).then(function(dbUser) {
       res.json(dbUser);
+      // this.id to get id of most recent user?
     });
   });
 
