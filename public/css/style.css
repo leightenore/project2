@@ -1,5 +1,6 @@
 /* font-family: 'Source Sans Pro', sans-serif; */
 
+
 /* /* START CSS FOR BIOMES.HTML */
 @font-face {
   font-family: Azedo;
@@ -211,7 +212,7 @@ font-size: 50px;
   text-align: center;
   margin: 3% 0 0 0;
   padding: 2%;
-  color: white;
+  color: rgb(232, 234,208)
 }
 p{
   font-family: 'Source Sans Pro', sans-serif; 
@@ -241,15 +242,14 @@ p{
 }
 
 #resultsCaption {
-  color: aliceblue;
-  font-size: 3rem;
+  /* color: aliceblue; */
+  /* font-size: 2rem; */
   margin: 10% 15% 0 15%;
-
+  font-family: Arial, Helvetica, sans-serif; 
+  color: rgb(232, 234,208);
+  font-size: 60px;
 }
 
-#resultsCaption {
-  font-family: Arial, Helvetica, sans-serif;
-}
 
 .fullwidthrow {
   width: 100vw !important;
@@ -274,36 +274,31 @@ p{
 }
 
 #destination {
+
   font-size: 50px;
 }
 
 .lead {
   font-size: 50px;
 }
-#resultsCaption{
-  font-family: 'Source Sans Pro', sans-serif;
-}
+
 #surveySum{
   font-family: 'Source Sans Pro', sans-serif;
   border-radius: 15px;
+  color: rgb(232, 234,208);
+  background-color: rgb(60, 78, 76, .8);
   /* background-color: black; */
    /* rgb(22, 50, 39); */
-  color: white;
+  /* color: white; */
 }
 
 .modal-content{
   background-color: rgba(24, 52, 39, .5)
 }
+
+/* code below is for an animation on the submit button if we want to use it.*/
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400|Raleway:300);
 
-
-/* a {
-  text-decoration: none;
-  line-height: 80px;
-  color: black;
-  text-align: center;
-  background-color: rgb(60, 78, 76, .8);
-} */
 
 .centerer {
   width: 100%;
