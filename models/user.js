@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-
+const Destination = require("./destination.js");
 
 module.exports = function (sequelize, DataTypes) {
     const User = sequelize.define("User", {
@@ -14,7 +14,8 @@ module.exports = function (sequelize, DataTypes) {
         price_choice: {
             type: DataTypes.STRING,
             allowNull: false
-        },
+        }
+        ,
         id: {
             type: DataTypes.INTEGER,
             autoIncrement: true,
@@ -23,5 +24,6 @@ module.exports = function (sequelize, DataTypes) {
     },{
         timestamps: false
     });
+
     return User;
 };

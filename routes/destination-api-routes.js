@@ -6,44 +6,22 @@ const sequelize = require('sequelize');
 // =============================================================
 module.exports = function (app) {
 
-
-  app.get("/api/destinations/", function (req, res) {
-    let max = 0;
+  app.get("/api/destinations", function (req, res) {
     db.User.findAll({
-      attributes: [sequelize.fn('max', sequelize.col('id'))],
-      raw: true,
-    }).then(function (data) {
-      max = data[0]['max(`id`)'];
-
+      limit: 1,
+      order: [['id', 'DESC']]
+    }).then(function (entries) {
 
       db.Destination.findAll({
         where: {
-          id: max
+          biome_choice: entries[0].biome_choice,
+          price_choice: entries[0].price_choice
         }
-      })
-    }).then(function (max) {
-      console.log(max);
-      db.Destination.findAll({
-        attributes: ["destination"],
-        where: {
-          id: max
-        }
-      }).then(function (dbDest) {
-        res.json(dbDest);
+      }).then(function (result) {
+        res.json(result);
+        console.log(result[0]);
       });
-    });
-  });
-
-
-// need to edit where statment to return matched location with the max id values not the one that matches the value itself
-
-
-
-//need to find the destination name where the price point and biome match the users selections
-//if statement?
-
-// need to edit where statment to return matched location with the max id values not the one that matches the value itself
-
-}
-
+    })
+  })
+};
 

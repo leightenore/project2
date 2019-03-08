@@ -137,7 +137,7 @@
                     <p>Select tile to set budget. Hover an image to see more details.</p>
                     <img id="lowCost" src="images/loose-change.jpg" alt="lowCost" class="img-thumbnail float-left">
                     <img id="midCost" src="images/midmoney.jpg" alt="midCost" class="img-thumbnail float-left">
-                    <img id="hiCost" src="images/istockphoto-185073997-1024x1024.jpg" alt="hiCost"
+                    <img id="highCost" src="images/istockphoto-185073997-1024x1024.jpg" alt="highCost"
                         class="img-thumbnail float-left">
                 </div>
             </div>
@@ -156,14 +156,14 @@
                     <h4 class="modal-title">Additonal</h4>
                 </div>
                 <div class="modal-body">
-                    <!-- <p>Select tile to set additonal conditions. Hover an image to see more details.</p>
+                    <p>Select tile to set additonal conditions. Hover an image to see more details.</p>
                     <img id="lowCost" src="images/loose-change.jpg" alt="lowCost" class="img-thumbnail float-left">
                     <img id="midCost" src="images/midmoney.jpg" alt="midCost" class="img-thumbnail float-left">
-                    <img id="hiCost" src="images/istockphoto-185073997-1024x1024.jpg" alt="hiCost"
+                    <img id="highCost" src="images/istockphoto-185073997-1024x1024.jpg" alt="highCost"
                         class="img-thumbnail float-left">
                 </div>
-                <div class="modal-footer"> -->
-                    <button type="button" class="btn btn-default" data-dismiss="modal" id="surveySum">Submit</button>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal" id="surveySum">SUBMIT</button>
                 </div>
             </div>
         </div>
@@ -182,9 +182,9 @@
 
 
     let userdata = {
-        username: "auto-gen",
-        biome_choice: 'temp',
-        price_choice: 'temp'
+        username: "user",
+        biome_choice: "",
+        price_choice: ""
     };
 
     // shows the first modal when page is loaded
@@ -236,7 +236,7 @@
         trigger('money', 'add');
         userdata.price_choice = this.id;
     });
-    $('#hiCost').on('click', function () {
+    $('#highCost').on('click', function () {
         trigger('money', 'add');
         userdata.price_choice = this.id;
     });
@@ -244,6 +244,7 @@
     $('#surveySum').on('click', function () {
         $.post('/api/users', userdata).then(function () {
             window.location.href = "/results";
+            console.log(userdata);
 
         });
     });
