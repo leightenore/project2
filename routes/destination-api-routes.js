@@ -10,8 +10,8 @@ module.exports = function (app) {
     db.Destination.findAll({
       include: [{
         model: db.User,
-        where: { biome_choice: db.User.biome_choice,
-        price_choice: db.User.price_choice }
+        where: { biome_choice: "tundra",
+        price_choice: db.Destination.price_choice }
       }]
     }).then(function(data) {
       console.log(data[0]);
