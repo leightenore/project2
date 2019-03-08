@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-
+const Destination = require("./destination.js");
 
 module.exports = function (sequelize, DataTypes) {
     const User = sequelize.define("User", {
@@ -23,7 +23,13 @@ module.exports = function (sequelize, DataTypes) {
     },{
         timestamps: false
     });
-    
-    User.hasOne(Destination)
+
+    User.associate = function(models) {
+        User.hasOne(models.Destination, {
+            foreignKey: {
+                onDelete: "cascade"
+            }
+        });
+    };
     return User;
 };

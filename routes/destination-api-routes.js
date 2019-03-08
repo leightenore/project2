@@ -7,11 +7,15 @@ const sequelize = require('sequelize');
 module.exports = function (app) {
 
   app.get("/api/destinations", function(req, res) {
-    db.Destination.findOne({
-      include: [db.User]
+    db.Destination.findAll({
+      include: [{
+        model: db.User,
+        where: { biome_choice: db.User.biome_choice,
+        price_choice: db.User.price_choice }
+      }]
     }).then(function(data) {
-
-  })
+      console.log(data);
+  });
   // app.get("/api/destinations/", function (req, res) {
   //   let max = 0;
   //   db.User.findAll({
@@ -49,6 +53,5 @@ module.exports = function (app) {
 
 // need to edit where statment to return matched location with the max id values not the one that matches the value itself
 
+});
 }
-
-
