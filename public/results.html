@@ -38,15 +38,15 @@
                     </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="images/BeachfrontAccommodation.jpg" class="d-block w-100" id="carousel1">
+                            <img src="images/BeachfrontAccommodation.jpg" class="d-block" id="carousel1">
                         </div>
                         <div class="carousel-item">
                             <img src="images/Latin-America-Ecuador-Galapagos-Islands-Bartolome-Island-MH.jpg"
-                                class="d-block w-100" id="carousel2">
+                                class="d-block" id="carousel2">
                         </div>
                         <div class="carousel-item">
                             <img src="images/articles-finland-the-worlds-biggest-wilderness-monitotxi.jpg"
-                                class="d-block w-100" id="carousel3">
+                                class="d-block" id="carousel3">
                         </div>
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
@@ -70,16 +70,17 @@
     $.backstretch('images/botany-dark-green-plants-fern-1687341.jpg');
 
     let destinationMatch = {
-        destination: destination,
-        biome_choice: biome_choice,
-        price_choice: price_choice,
-        image_one: image_one,
-        image_two: image_two,
-        image_three: image_three
+        destination: "",
+        biome_choice: "",
+        price_choice: "",
+        image_one: "",
+        image_two: "",
+        image_three: ""
     };
+
     window.onload = function () {
         $.get("/api/destinations/", destinationMatch, function (req, res) {
-            db.Destination.findOne({
+            db.Destination.findAll({
                 include: [db.User]
             }).then(function (destinationMatch) {
                 console.log(destinationMatch);

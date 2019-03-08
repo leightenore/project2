@@ -6,33 +6,38 @@ const sequelize = require('sequelize');
 // =============================================================
 module.exports = function (app) {
 
+  app.get("/api/destinations", function(req, res) {
+    db.Destination.findOne({
+      include: [db.User]
+    }).then(function(data) {
 
-  app.get("/api/destinations/", function (req, res) {
-    let max = 0;
-    db.User.findAll({
-      attributes: [sequelize.fn('max', sequelize.col('id'))],
-      raw: true,
-    }).then(function (data) {
-      max = data[0]['max(`id`)'];
+  })
+  // app.get("/api/destinations/", function (req, res) {
+  //   let max = 0;
+  //   db.User.findAll({
+  //     attributes: [sequelize.fn('max', sequelize.col('id'))],
+  //     raw: true,
+  //   }).then(function (data) {
+  //     max = data[0]['max(`id`)'];
 
 
-      db.Destination.findAll({
-        where: {
-          id: max
-        }
-      })
-    }).then(function (max) {
-      console.log(max);
-      db.Destination.findAll({
-        attributes: ["destination"],
-        where: {
-          id: max
-        }
-      }).then(function (dbDest) {
-        res.json(dbDest);
-      });
-    });
-  });
+  //     db.Destination.findAll({
+  //       where: {
+  //         id: max
+  //       }
+  //     })
+  //   }).then(function (max) {
+  //     console.log(max);
+  //     db.Destination.findAll({
+  //       attributes: ["destination"],
+  //       where: {
+  //         id: max
+  //       }
+  //     }).then(function (dbDest) {
+  //       res.json(dbDest);
+  //     });
+  //   });
+  // });
 
 
 // need to edit where statment to return matched location with the max id values not the one that matches the value itself

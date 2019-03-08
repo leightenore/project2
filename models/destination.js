@@ -6,11 +6,11 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.STRING,
             allowNull: false
         },
-        biome: {
+        biome_choice: {
             type: DataTypes.STRING, 
             allowNull: false
         },
-        price_point: {
+        price_choice: {
             type: DataTypes.STRING,
             allowNull: false
         },
@@ -29,5 +29,7 @@ module.exports = function (sequelize, DataTypes) {
     },{
         timestamps: false
     });
+    
+    Destination.belongsTo(User, {foreignKey: "biome_choice"})
     return Destination;
 };

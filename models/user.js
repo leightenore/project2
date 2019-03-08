@@ -23,5 +23,7 @@ module.exports = function (sequelize, DataTypes) {
     },{
         timestamps: false
     });
+    
+    User.hasOne(Destination)
     return User;
 };
