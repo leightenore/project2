@@ -2,21 +2,21 @@
 
 <head>
 
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Home</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-        <!-- jQuery -->
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    
-        <!-- Bootstrap CDN -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    
-        <!-- Backstretch CDN -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <!-- Backstretch CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
 
 
     <!-- CSS Links -->
@@ -28,8 +28,9 @@
 
 <body>
     <div class="container important">
-        <div class="row" id="fullwidthrow"
-            <div class="bd-example">
+        <div class="jumbotron jumbotron-fluid">
+
+            <div class="row" id="fullwidthrow" class="bd-example">
                 <div id="carouselExampleCaptions" class="carousel slide w-100" data-ride="carousel">
                     <ol class="carousel-indicators">
                         <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
@@ -42,7 +43,7 @@
                         </div>
                         <div class="carousel-item">
 
-                            <img src="images/Latin-America-Ecuador-Galapagos-Islands-Bartolome-Island-MH.jpg" 
+                            <img src="images/Latin-America-Ecuador-Galapagos-Islands-Bartolome-Island-MH.jpg"
                                 class="d-block w-100" id="carousel2">
 
                         </div>
@@ -61,19 +62,13 @@
                     </a>
                 </div>
             </div>
-        </div><br>
 
-        <div class="jumbotron jumbotron-fluid">
-                <div class="container">
-                  <h1 class="display-4">YOUR PERFECT VACATION DESTINATION IS:</h1>
-                  <p class="lead"><span id="destination"></span>!</p>
-                  <div class="row" id="resultsCaption">
-                         
-                    </div>
+            <div class="row" id="resultsCaption">
+                <h1 class="display-4">Your parfect vacation destination is </h1>
+                <p class="lead"><span id="destination"></span>!</p>
+            </div>
 
-                  </div>
-              </div>
-
+        </div>
     </div>
 </body>
 
@@ -81,14 +76,14 @@
     $.backstretch('images/botany-dark-green-plants-fern-1687341.jpg');
 
     window.onload = function () {
-       apicall = $.get('/api/destinations', function (data) {
-           console.log(data);
-           $("#destination").append(data[0].destination);
-           $("#carousel1").attr("src", data[0].image_one);
-           $("#carousel2").attr("src", data[0].image_two);
-           $("#carousel3").attr("src", data[0].image_three);
-       });
-   }
+        apicall = $.get('/api/destinations', function (data) {
+            console.log(data);
+            $("#destination").append(data[0].destination);
+            $("#carousel1").attr("src", data[0].image_one);
+            $("#carousel2").attr("src", data[0].image_two);
+            $("#carousel3").attr("src", data[0].image_three);
+        });
+    }
 
 </script>
 
