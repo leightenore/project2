@@ -14,19 +14,19 @@ module.exports = function (sequelize, DataTypes) {
         price_choice: {
             type: DataTypes.STRING,
             allowNull: false
-        },
-        image_one: {
-            type: DataTypes.STRING, 
-            allowNull: true
-        },
-        image_two: {
-            type: DataTypes.STRING, 
-            allowNull: true
-        },
-        image_three: {
-            type: DataTypes.STRING, 
-            allowNull: true
-        }
+        // },
+        // image_one: {
+        //     type: DataTypes.STRING, 
+        //     allowNull: true
+        // },
+        // image_two: {
+        //     type: DataTypes.STRING, 
+        //     allowNull: true
+        // },
+        // image_three: {
+        //     type: DataTypes.STRING, 
+        //     allowNull: true
+         }
     },{
         timestamps: false
     });

@@ -1,6 +1,6 @@
 const path = require('path');
 const db = require("../models");
-const sequelize = require('sequelize');
+// const sequelize = require('sequelize');
 
 // Routes
 // =============================================================
