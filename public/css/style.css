@@ -6,9 +6,9 @@
   src: url("Azedo.otf");
 }
 
-div {
+/* div {
   font-family: Azedo;
-}
+} */
 * {
 box-sizing: border-box;
 }
@@ -223,12 +223,6 @@ p{
 #resultsCaption {
   color: aliceblue;
   font-size: 3rem;
-  margin: 10% 15% 0 15%;
-
-}
-
-#resultsCaption {
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 .fullwidthrow {
@@ -254,15 +248,25 @@ p{
 }
 
 #destination {
-  font-size: 50px;
+  font-size: 3rem;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 .lead {
   font-size: 50px;
 }
+
+#resultsContainer, 
+#resultsJumbotron {
+  padding: 0px;
+  margin: 0px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
 #resultsCaption{
   font-family: 'Source Sans Pro', sans-serif;
 }
+
 #surveySum{
   font-family: 'Source Sans Pro', sans-serif;
   border-radius: 15px;
