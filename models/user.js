@@ -1,4 +1,5 @@
 const Sequelize = require('sequelize');
+const Destination = require("./destination.js");
 
 module.exports = function (sequelize, DataTypes) {
     const User = sequelize.define("User", {
@@ -14,8 +15,15 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.STRING,
             allowNull: false
         }
+        ,
+        id: {
+            type: DataTypes.INTEGER,
+            autoIncrement: true,
+            primaryKey: true
+        }
     },{
         timestamps: false
     });
+
     return User;
 };
