@@ -273,3 +273,7 @@ p{
   background-color: rgb(39, 50, 101);
   color: white;
 }
+
+.carousel-item {
+  margin: 0 auto;
+}
