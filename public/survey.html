@@ -183,8 +183,8 @@
 
     let userdata = {
         username: "auto-gen",
-        biome_choice: 'temp',
-        price_choice: 'temp'
+        biome_choice: '',
+        price_choice: ''
     };
 
     // shows the first modal when page is loaded
@@ -244,6 +244,7 @@
     $('#surveySum').on('click', function () {
         $.post('/api/users', userdata).then(function () {
             window.location.href = "/results";
+            console.log(userData);
 
         });
     });
