@@ -156,13 +156,13 @@
                     <h4 class="modal-title">Additonal</h4>
                 </div>
                 <div class="modal-body">
-                    <p>Select tile to set additonal conditions. Hover an image to see more details.</p>
+                    <!-- <p>Select tile to set additonal conditions. Hover an image to see more details.</p>
                     <img id="lowCost" src="images/loose-change.jpg" alt="lowCost" class="img-thumbnail float-left">
                     <img id="midCost" src="images/midmoney.jpg" alt="midCost" class="img-thumbnail float-left">
                     <img id="highCost" src="images/istockphoto-185073997-1024x1024.jpg" alt="highCost"
                         class="img-thumbnail float-left">
                 </div>
-                <div class="modal-footer">
+                <div class="modal-footer"> -->
                     <button type="button" class="btn btn-default" data-dismiss="modal" id="surveySum">SUBMIT</button>
                 </div>
             </div>
@@ -175,21 +175,16 @@
 </html>
 
 <script>
-
     
         $.backstretch('images/botany-dark-green-plants-fern-1687341.jpg');
     
-
-
     let userdata = {
         username: "user",
         biome_choice: "",
         price_choice: ""
     };
-
     // shows the first modal when page is loaded
     window.onload = function () {
-
         $('#biomemodal').modal('show');
     };
     // tells what modal to hide and which to show when called
@@ -240,12 +235,10 @@
         trigger('money', 'add');
         userdata.price_choice = this.id;
     });
-
     $('#surveySum').on('click', function () {
         $.post('/api/users', userdata).then(function () {
             window.location.href = "/results";
             console.log(userdata);
-
         });
     });
 </script>
