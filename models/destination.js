@@ -31,11 +31,5 @@ module.exports = function (sequelize, DataTypes) {
         timestamps: false
     });
 
-    Destination.associate = function(models) {
-        Destination.hasMany(models.User, {
-            foreignKey: "price_choice",
-            foreignKey: "biome_choice"
-        });
-    };    
     return Destination;
 };
