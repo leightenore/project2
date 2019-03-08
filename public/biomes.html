@@ -4,11 +4,16 @@
 <head>
         <link rel="stylesheet" type="text/css" href="./css/style.css"/>
         <link rel="stylesheet" type="text/css" href="./images/"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
 </head>
+
+
 
 <body>
 
-<div class="flexbox">
+
+<div class="flexbox" id="biomesDiv">
 
         <div id="desert"class="item container sepia">
           <img class="image" src="images/desert.jpg" height="460"/>
@@ -30,7 +35,7 @@
             </div>
         </div>
         <div id="rainforest" class="item container sepia">
-          <img class="image" src="images/rainforest.jpg" height="480" width="680"/>
+          <img class="image" src="images/rainforest.jpg" height="470" width="680"/>
           <div class="overlay">
               <div class="text underline"><H1>RAINFOREST</H1></div>
             </div>
@@ -47,16 +52,25 @@
               <div class="text underline"><H1>TROPICAL</H1></div>
             </div>
         </div>
-        <div id="tundra" class="item container grayscale">
+        <!-- <div id="tundra" class=" row item container grayscale">
           <img class="image" src="images/tundra.jpg" height="780" width=""/>
           <div class="overlay">
               <div class="text underline" ><H1>TUNDRA</H1></div>
             </div>
-        </div>
+        </div> -->
       </div>
 
 
-
-      
-    
-    </body>
+<!-- 
+      <!-- <div class="container"> -->
+        <div class="row">
+          <div class="col-lg-12 col-md-12">
+            <div id="tundra" class=" row item container grayscale">
+          <img class="image" src="images/tundra.jpg" height="650" width="1200"/>
+          <div class="overlay">
+              <div class="text underline" id="tundraHeading"><H1>TUNDRA</H1></div>
+            </div>
+        </div>
+          </div> 
+     -->
+        </body>

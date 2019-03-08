@@ -246,3 +246,37 @@ p{
   margin: 10% 15% 0 15%;
 
 }
+
+#resultsCaption {
+  background-color: bisque;
+}
+
+.fullwidthrow {
+  width: 100vw !important;
+}
+
+.important {
+  width: 100vw !important;
+}
+
+.row {
+  width: 100vw !important;
+  text-align: center;
+}
+
+.carousel, .slide {
+  width: 100vw;
+}
+
+.display-4 {
+  align-self: center !important;
+  text-align: center;
+}
+
+#destination {
+  font-size: 50px;
+}
+
+.lead {
+  font-size: 50px;
+}
