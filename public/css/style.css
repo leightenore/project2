@@ -186,26 +186,6 @@ font-size: 50px;
   transition: 1.2s ease-in-out;
 }
 
-
-/* END CSS FOR BIOMES.HTML */
-/* #start {
-  position: relative;
-  top: 900%;
-  opacity: 0.6;
-}
-.jumbotron {
-  background: transparent;
-  color: aliceblue;
-  position: relative;
-  top: 110%;
-  left: 75%;
-}
-.modal-body {
-  max-height: calc(100vh - 210px);
-  overflow-y: auto;
-} */
-/* END CSS FOR BIOMES */
-
 h4{
   font-family: 'Source Sans Pro', sans-serif; 
   text-align: center;
@@ -245,4 +225,38 @@ p{
   font-size: 3rem;
   margin: 10% 15% 0 15%;
 
+}
+
+#resultsCaption {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.fullwidthrow {
+  width: 100vw !important;
+}
+
+.important {
+  width: 100vw !important;
+}
+
+.row {
+  width: 100vw !important;
+  text-align: center;
+}
+
+.carousel, .slide {
+  width: 100vw;
+}
+
+.display-4 {
+  align-self: center !important;
+  text-align: center;
+}
+
+#destination {
+  font-size: 50px;
+}
+
+.lead {
+  font-size: 50px;
 }
