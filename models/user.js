@@ -25,11 +25,5 @@ module.exports = function (sequelize, DataTypes) {
         timestamps: false
     });
 
-    User.associate = function(models) {
-        User.belongsTo(models.Destination, {
-            foreignKey: "price_choice",
-            foreignKey: "biome_choice"
-        });
-    };
     return User;
 };
