@@ -14,6 +14,7 @@
     "dialect": "mysql"
   },
   "production": {
+    "use_env_variable": "mysql://ns5yzdn29bdtp3hs:nzc0ojivkgts3ij4@q68u8b2buodpme2n.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/o7ioil1hhj09ble6",
     "username": "root",
     "password": "root",
     "database": "destinations_db",
