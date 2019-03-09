@@ -20,6 +20,8 @@
     <!-- CSS Links -->
     <link rel="stylesheet" media="screen" href="css/reset.css" />
     <link rel="stylesheet" media="screen" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="./images/" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 
 </head>
 
@@ -27,41 +29,128 @@
 
     <!-- Biome Modal -->
     <div id="biomemodal" class="modal fade" role="dialog">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-lg">
 
             <!-- Modal content-->
             <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title">Choose the Biome!</h4>
+                <div class="modal-head">
+                    <h4>Choose your Biome!</h4>
                 </div>
-                <div class="modal-body">
-                    <p>You will select tile that interests you the most. Hover an image to see more details.</p>
-                    <img id="rainBiome" src="images/Latin-America-Ecuador-Galapagos-Islands-Bartolome-Island-MH.jpg"
-                        alt="rainforest" class="img-thumbnail">
-                    <img id="tropicBiome" src="images/BeachfrontAccommodation.jpg" alt="tropic" class="img-thumbnail">
-                    <img id="taigaBiome" src="images/articles-finland-the-worlds-biggest-wilderness-monitotxi.jpg"
-                        alt="taiga" class="img-thumbnail">
-                </div>
-            </div>
+                <div class="modal-body ">
+                    <div class="flexbox" id="biomesDiv">
 
+                        <div id="desert" class="item container sepia">
+                            <img class="image" src="images/desert.jpg" />
+                            <!-- height="460"   -->
+                            <div class="overlay">
+                                <div class="text underline">
+                                    <h1>DESERT</h1>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="forest" class="item container grayscale">
+                            <img class="image" src="images/forest.jpg" />
+                            <!-- height="660" width="500"  -->
+
+                            <div class="overlay">
+                                <div class="text underline">
+                                    <H1>FOREST</H1>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="grassland" class="item container grayscale">
+                            <img class="image grayscale" src="images/grassland.jpg" />
+                            <!-- height="650" width="480" /> -->
+                            <div class="overlay">
+                                <div class="text underline">
+                                    <H1>GRASSLAND</H1>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="rainforest" class="item container sepia">
+                            <img class="image" src="images/rainforest.jpg" />
+                            <!-- height="470" width="680" /> -->
+                            <div class="overlay">
+                                <div class="text underline">
+                                    <H1>RAINFOREST</H1>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="taiga" class="item container sepia">
+                            <img class="image" src="images/taiga.jpg" />
+                            <!-- height="480" width="740" /> -->
+                            <div class="overlay">
+                                <div class="text underline">
+                                    <H1>TAIGA</H1>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tropical" class="item container grayscale">
+                            <img class="image" src="images/tropical.jpg" height="640" width="840" />
+                            <div class="overlay">
+                                <div class="text underline">
+                                    <H1>TROPICAL</H1>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tundra" class=" row item container grayscale">
+                            <img class="image" src="images/tundra.jpg" />
+                            <!-- height="780" width="" /> -->
+                            <div class="overlay">
+                                <div class="text underline">
+                                    <H1>TUNDRA</H1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </div>
 
     <!-- Money Modal -->
     <div id="moneymodal" class="modal fade" role="dialog">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-lg" class="modal-dialog modal-dialog-centered"
+            class="modal-dialog modal-dialog-scrollable ">
 
             <!-- Modal content-->
             <div class="modal-content">
-                <div class="modal-header">
+                <div class="modal-head">
                     <h4 class="modal-title">Budget</h4>
+                    <p>How much $$$ do you want to spend?</p>
                 </div>
                 <div class="modal-body">
-                    <p>Select tile to set budget. Hover an image to see more details.</p>
-                    <img id="lowCost" src="images/loose-change.jpg" alt="lowCost" class="img-thumbnail float-left">
-                    <img id="midCost" src="images/midmoney.jpg" alt="midCost" class="img-thumbnail float-left">
-                    <img id="hiCost" src="images/istockphoto-185073997-1024x1024.jpg" alt="hiCost"
-                        class="img-thumbnail float-left">
+                    
+                    <div class="flexbox" id="priceDiv">
+
+                        <div id="lowCost" value="$" class="item container sepia">
+                            <img class="image" src="images/loose-change.jpg" height="460" />
+                            <div class="overlay">
+                                <div class="text underline">
+                                    <h1 style="font-size: 180px;">$</h1>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <div id="midCost" value="$$" class="item container sepia">
+                            <img class="image" src="images/midmoney.jpg" height="660" width="500" />
+                            <div class="overlay">
+                                <div class="text underline">
+                                        <h1 style="font-size: 180px;">$$</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="highCost" value="$$$" class="item container sepia">
+                            <img class="image grayscale" src="images/largemoney.jpg" height="650" width="480" />
+                            <div class="overlay">
+                                <div class="text underline">
+                                        <h1 style="font-size: 180px;">$$$</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -70,22 +159,29 @@
 
     <!-- Additional Modal -->
     <div id="addmodal" class="modal fade" role="dialog">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-lg" class="modal-dialog modal-dialog-centered"
+            class="modal-dialog modal-dialog-scrollable ">
 
             <!-- Modal content-->
             <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title">Additonal</h4>
+                <div class="modal-head">
+                    <h4 class="modal-title">Are you ready?</h4>
+                    <br>
+                    <p>Let's see where off the beaten path you should travel!</p>
                 </div>
                 <div class="modal-body">
-                    <p>Select tile to set additonal conditions. Hover an image to see more details.</p>
+                    
+                    <!-- <p>Select tile to set additonal conditions. Hover an image to see more details.</p>
                     <img id="lowCost" src="images/loose-change.jpg" alt="lowCost" class="img-thumbnail float-left">
                     <img id="midCost" src="images/midmoney.jpg" alt="midCost" class="img-thumbnail float-left">
-                    <img id="hiCost" src="images/istockphoto-185073997-1024x1024.jpg" alt="hiCost"
+                    <img id="highCost" src="images/istockphoto-185073997-1024x1024.jpg" alt="highCost"
                         class="img-thumbnail float-left">
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal" id="surveySum">Submit</button>
+
+                <div class="modal-footer"> -->
+                    <center>
+                    <button type="button" class="btn-9" data-dismiss="modal" id="surveySum">SHOW ME!</button>
+                </center>
                 </div>
             </div>
         </div>
@@ -97,63 +193,70 @@
 </html>
 
 <script>
-    $.backstretch('images/botany-dark-green-plants-fern-1687341.jpg');
-
-    let dbarr = [];
-
+    
+        $.backstretch('images/botany-dark-green-plants-fern-1687341.jpg');
+    
+    let userdata = {
+        username: "user",
+        biome_choice: "",
+        price_choice: ""
+    };
     // shows the first modal when page is loaded
     window.onload = function () {
         $('#biomemodal').modal('show');
     };
-
     // tells what modal to hide and which to show when called
     function trigger(first, second) {
-
         let hide = '#' + first + 'modal';
         let show = '#' + second + 'modal';
-
         $(hide).modal('hide');
         $(show).modal('show');
     };
-
     // Click functions for results
-    $('#rainBiome').on('click', function () {
+    $('#rainforest').on('click', function () {
         trigger('biome', 'money');
-        dbarr.push(this.id);
+        userdata.biome_choice = this.id;
     });
-
-    $('#tropicBiome').on('click', function () {
+    $('#tropical').on('click', function () {
         trigger('biome', 'money');
-        dbarr.push(this.id);
+        userdata.biome_choice = this.id;
     });
-
-    $('#taigaBiome').on('click', function () {
+    $('#taiga').on('click', function () {
         trigger('biome', 'money');
-        dbarr.push(this.id);
+        userdata.biome_choice = this.id;
     });
-
+    $('#desert').on('click', function () {
+        trigger('biome', 'money');
+        userdata.biome_choice = this.id;
+    });
+    $('#forest').on('click', function () {
+        trigger('biome', 'money');
+        userdata.biome_choice = this.id;
+    });
+    $('#grassland').on('click', function () {
+        trigger('biome', 'money');
+        userdata.biome_choice = this.id;
+    });
+    $('#tundra').on('click', function () {
+        trigger('biome', 'money');
+        userdata.biome_choice = this.id;
+    });
     $('#lowCost').on('click', function () {
         trigger('money', 'add');
-        dbarr.push(this.id);
+        userdata.price_choice = this.id;
     });
-
     $('#midCost').on('click', function () {
         trigger('money', 'add');
-        dbarr.push(this.id);
+        userdata.price_choice = this.id;
     });
-
-    $('#hiCost').on('click', function () {
+    $('#highCost').on('click', function () {
         trigger('money', 'add');
-        dbarr.push(this.id);
+        userdata.price_choice = this.id;
     });
-
-    $('#surveySum').on('click', function() {
-        $.post(userdata).then(function() {
-            window.location = ('./results.html');
+    $('#surveySum').on('click', function () {
+        $.post('/api/users', userdata).then(function () {
+            window.location.href = "/results";
+            console.log(userdata);
         });
     });
-
-
-
-
 </script>
