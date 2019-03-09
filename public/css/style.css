@@ -1,21 +1,12 @@
-/* font-family: 'Source Sans Pro', sans-serif; */
-
-
-/* /* START CSS FOR BIOMES.HTML */
 @font-face {
   font-family: Azedo;
   src: url("Azedo.otf");
 }
 
-/* div {
-  font-family: Azedo;
-} */
 * {
 box-sizing: border-box;
 }
-/* body {
-background-image: url(https://images.unsplash.com/photo-1489551917489-bddbe72c6734?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1868&q=80)
-} */
+
 .flexbox {
 display: -webkit-flex;
 display: flex;
@@ -27,15 +18,18 @@ height: 100%;
 width: 100% !important;
 overflow: hidden;
 }
+
 .flexbox .item {
 position: relative;
 width: 33.33%;
 }
+
 .flexbox .item img {
 width: 100%;
 display: block;
 transition: all .8s;
 }
+
 @media (max-width: 860px) {
 .flexbox {
   height: 220vw;
@@ -44,6 +38,7 @@ transition: all .8s;
   width: 50%;
 }
 }
+
 @media (max-width: 667px) {
 .flexbox {
   height: auto;
@@ -52,14 +47,17 @@ transition: all .8s;
   width: 100%;
 }
 }
+
 #tundra {
 margin-left: 0px !important;
 margin-right: 0px;
 align-items: center;
 }
+
 #tundraHeading {
 left:53%
 }
+
 @media only screen and (max-width: 600px) {
 #tundra {
   margin-left: 0 !important;
@@ -77,22 +75,16 @@ left:53%
 
 }
 }
+
 /* START OVERLAY STYLE */
 .container {
   position: relative; 
-   /* width: 50%; */
     width: 100% !important;
     padding-right: 0px !important;
     padding-left: 0px !important;
     margin-right: 0;
     margin-left: 0;
 }
-
-/* .image {
-   display: block; 
-   width: 100%; 
-  height: auto;
-}  */
 
 .overlay {
   position: absolute;
@@ -123,11 +115,6 @@ left:53%
   transform: translate(-50%, -50%);
   text-align: center;
 }
-/* 
-.text:hover {
-  text-decoration: underline;
-  transition: 2s ease;
-        } */
 /*END OVERLAY STYLE    */
 /* ------------------------- */
 /* START GREYSCALE/SEPIA EFFECT */
@@ -163,10 +150,6 @@ font-size: 50px;
 /* END GREYSCALE/SEPIA EFFECT */
 /* ------------------------------ */
 /* underline effect */
-/* 
-.cool-link {
-  text-decoration: none;
-} */
 
 .underline::after {
   content: "";
@@ -187,50 +170,38 @@ font-size: 50px;
   transition: 1.2s ease-in-out;
 }
 
-
-/* END CSS FOR BIOMES.HTML */
-/* #start {
-  position: relative;
-  top: 900%;
-  opacity: 0.6;
+h4{
+  font-family: 'Roboto Condensed', sans-serif;
+  text-align: center;
 }
-.jumbotron {
-  background: transparent;
-  color: aliceblue;
-  position: relative;
-  top: 110%;
-  left: 75%;
-}
-.modal-body {
-  max-height: calc(100vh - 210px);
-  overflow-y: auto;
-} */
-/* END CSS FOR BIOMES */
 
 .modal-head{
-  font-family: 'Source Sans Pro', sans-serif; 
+  font-family: 'Roboto Condensed', sans-serif;
   text-align: center;
-  margin: 3% 0 0 0;
+  margin: 20px 0px 0px 0px;
   padding: 2%;
-  color: rgb(232, 234,208)
+  color: rgb(232, 234,208);
+  font-size: 20px;
 }
+
 p{
-  font-family: 'Source Sans Pro', sans-serif; 
+  font-family: 'Roboto Condensed', sans-serif;
   text-align: center;
   margin: 0 0 5% 0;
 }
-
 
 #start {
     top: 900%;
     opacity: 0.9;
 }
+
 .jumbotron {
     background: transparent;
     color: aliceblue;
     font-family: Azedo;
     src: url("Azedo.otf");
 }
+
 .modal-body {
     max-height: calc(100vh - 210px);
     max-width: 100vw;
@@ -288,6 +259,165 @@ p{
 }
 
 .modal-content{
+  background-color: rgba(24, 52, 39, .5)
+}
+
+/* code below is for an animation on the submit button if we want to use it.*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400|Raleway:300);
+
+
+.centerer {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (min-width: 600px) {
+  .wrap {
+    width: 50%;
+    float: left;
+  }
+}
+[class^="btn-"] {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  height: 80px;
+  max-width: 250px;
+  margin: 1rem auto;
+  text-transform: uppercase;
+  border: 1px solid currentColor;
+}
+.btn-9 {
+    color: rgb(232, 234,208);
+    background-color: rgb(60, 78, 76, .8);
+    font-family: 'Handlee', cursive;
+    text-align: center;
+    border-radius: 5px;
+  }
+  .btn-9:before, .btn-9:after,
+  .btn-9 span:before,
+  .btn-9 span:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: rgba(211, 201,167, 0.25);
+    transition: 0.4s ease-in-out;
+  }
+  .btn-9:after,
+  .btn-9 span:before {
+    top: auto;
+    bottom: 0;
+  }
+  .btn-9 span:before,
+  .btn-9 span:after {
+    transition-delay: 0.4s;
+  }
+  .btn-9:hover {
+    color: rgb(232, 234,208);
+  }
+  .btn-9:hover:before, .btn-9:hover:after,
+  .btn-9:hover span:before,
+  .btn-9:hover span:after {
+    height: 80px;
+  }
+  .btn-9:active {
+    background-color: rgb(232, 234,208);
+  }
+  @-webkit-keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(-100%, 0, 0);
+      transform: translate3d(-100%, 0, 0);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(-100%, 0, 0);
+      transform: translate3d(-100%, 0, 0);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  .fadeInLeft {
+    -webkit-animation-name: fadeInLeft;
+    animation-name: fadeInLeft;
+  }
+  
+  @-webkit-keyframes fadeInLeftBig {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(-2000px, 0, 0);
+      transform: translate3d(-2000px, 0, 0);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  @keyframes fadeInLeftBig {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(-2000px, 0, 0);
+      transform: translate3d(-2000px, 0, 0);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  .fadeInLeftBig {
+    -webkit-animation-name: fadeInLeftBig;
+    animation-name: fadeInLeftBig;
+  }
+
+#resultsContainer, 
+#resultsJumbotron {
+  padding: 0px;
+  margin: 0px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+#resultsCaption {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+#surveySum {
+  font-family: 'Source Sans Pro', sans-serif;
+  border-radius: 15px;
+  background-color: rgb(39, 50, 101);
+  color: white;
+}
+
+.carousel-item {
+  margin: 0 auto;
+}
+
+.modal-content {
   background-color: rgba(24, 52, 39, .5)
 }
 
