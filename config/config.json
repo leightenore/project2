@@ -14,10 +14,11 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": "root",
-    "database": "destinations_db",
-    "host": "127.0.0.1",
+    "username": "hbb2kfi81iv4ql5n",
+    "password": "km81mvqdb63s40y1",
+    "database": "zkffhcnqcso5poso",
+    "host": "pwcspfbyl73eccbn.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "port": 3306,
     "dialect": "mysql"
   }
 }
