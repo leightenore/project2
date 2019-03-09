@@ -14,11 +14,11 @@
     "dialect": "mysql"
   },
   "production": {
-    "use_env_variable": "mysql://ns5yzdn29bdtp3hs:nzc0ojivkgts3ij4@q68u8b2buodpme2n.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/o7ioil1hhj09ble6",
-    "username": "root",
-    "password": "root",
-    "database": "destinations_db",
-    "host": "127.0.0.1",
+    "username": "hbb2kfi81iv4ql5n",
+    "password": "km81mvqdb63s40y1",
+    "database": "zkffhcnqcso5poso",
+    "host": "pwcspfbyl73eccbn.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "port": 3306,
     "dialect": "mysql"
   }
 }
