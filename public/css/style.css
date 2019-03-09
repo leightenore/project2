@@ -7,9 +7,9 @@
   src: url("Azedo.otf");
 }
 
-div {
+/* div {
   font-family: Azedo;
-}
+} */
 * {
 box-sizing: border-box;
 }
@@ -242,14 +242,9 @@ p{
 }
 
 #resultsCaption {
-  /* color: aliceblue; */
-  /* font-size: 2rem; */
-  margin: 10% 15% 0 15%;
-  font-family: Arial, Helvetica, sans-serif; 
   color: rgb(232, 234,208);
-  font-size: 60px;
+  font-size: 3rem;
 }
-
 
 .fullwidthrow {
   width: 100vw !important;
@@ -274,8 +269,8 @@ p{
 }
 
 #destination {
-
-  font-size: 50px;
+  font-size: 3rem;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 .lead {
@@ -428,3 +423,25 @@ p{
     -webkit-animation-name: fadeInLeftBig;
     animation-name: fadeInLeftBig;
   }
+
+#resultsContainer, 
+#resultsJumbotron {
+  padding: 0px;
+  margin: 0px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+#resultsCaption{
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+#surveySum{
+  font-family: 'Source Sans Pro', sans-serif;
+  border-radius: 15px;
+  background-color: rgb(39, 50, 101);
+  color: white;
+}
+
+.carousel-item {
+  margin: 0 auto;
+}
