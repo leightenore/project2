@@ -1,5 +1,5 @@
 # Off the Beaten Path
-## Project Two of U of A Bootcamp
+## Project Two University of Arizona Bootcamp
 
 #### Kolton Bingham (@Kloudsora), Joshua Mobley (@jmobley09), Jenae Studer-Hart (@naeNae15232), and Leigh Tenore (@leightenore)
 
